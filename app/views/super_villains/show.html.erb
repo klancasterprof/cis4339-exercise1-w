@@ -1,5 +1,7 @@
 <p id="notice"><%= notice %></p>
 
+
+<%= @dog %>
 <p>
   <strong>Name:</strong>
   <%= @super_villain.name %>
@@ -8,6 +10,12 @@
 <p>
   <strong>Description:</strong>
   <%= @super_villain.description %>
+</p>
+
+<p>
+  <% @super_villain.minions.each do |n| %>
+    <%= n.name %>,
+  <% end %> 
 </p>
 
 <%= link_to 'Edit', edit_super_villain_path(@super_villain) %> |
